@@ -11,6 +11,22 @@ export default new Vuex.Store({
       complete: false
     }]
   },
-  mutations: {},
-  actions: {}
+  mutations: {
+    addTodo (state, payload) {
+      state.todos.push(payload)
+    },
+    updateTodo (state, payload) {
+      let todos = []
+      state.todos.forEach(todo => {
+        todos.push(todo)
+      })
+      todos.find(todo => todo.id === payload.id).status = 'archived'
+      state.todos = todos
+    },
+    removeTodo (state, payload) {
+      state.todos.splice(state.todos.findIndex(todo => todo.id === payload.id), 1)
+    }
+  },
+  actions: {
+  }
 })
