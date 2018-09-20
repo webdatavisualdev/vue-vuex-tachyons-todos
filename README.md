@@ -1,3 +1,5 @@
-`npm install`
+# vue-vuex-tachyons-todos
+This is todos built with VueJS, Vuex, Tachyons
 
-`npm run serve`
+- `npm install`
+- `npm run serve`
